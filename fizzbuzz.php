@@ -14,7 +14,7 @@
 		if ($count%3 == 0 || $count%5 == 0){
 
 				if($count%3 == 0 && $count%5 == 0) echo "fizbuzz<br>";
-					else 
+				else 
 					{
 					if($count%3 == 0) echo "fizz <br>";
 					if($count%5 == 0) echo "buzz <br>";
