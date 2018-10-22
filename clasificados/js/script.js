@@ -17,29 +17,42 @@ var res = document.getElementById('resultado');
 
 function ordenar (marca, persona)
 {
-	if(marca<primero) 
+
+
+	if (marca <= tercero) 
+
+	{
+		if(marca<=primero) 
 		{
 			tercero = segundo;
 			segundo = primero;
 			primero = marca;
+			terceroNombre = segundoNombre;
+			segundoNombre = primeroNombre;
 			primeroNombre = persona;
 		}
 
-	else 
-	{
-		if(marca<segundo) 
+		else 
+		{
+			if(marca<=segundo) 
 			{	
-				tercero = segundo;
-				segundo = marca; 
-				segundoNombre = persona;
+			tercero = segundo;
+			segundo = marca; 
+			terceroNombre = segundoNombre;
+			segundoNombre = persona;
 			}
 
-		if(marca<tercero) 
-		{
-			tercero = marca;
-			terceroNombre = persona;
+			
+			else
+			{
+				tercero = marca;
+				terceroNombre = persona;
+			}
+			
 		}
 	}
+
+	
 } 
 
 
@@ -49,6 +62,9 @@ while(true)
 	if(persona.toLowerCase() == "salir") break;
 	marca = prompt("marca de competidor");
 	ordenar(marca, persona);
+	console.log("primero: "+primeroNombre);
+	console.log("segundo: "+segundoNombre);
+	console.log("tercero: "+terceroNombre);
 }
 
 
