@@ -1,0 +1,13 @@
+nav
+{
+    background-color: #237170;
+}
+
+.numimpar
+{
+    font-weight: bold;
+    font-size: 2em;
+    display: inline;
+    margin-left: 20px;
+
+}
