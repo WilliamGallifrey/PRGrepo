@@ -9,5 +9,27 @@ nav
     font-size: 2em;
     display: inline;
     margin-left: 20px;
-
 }
+
+.numspan
+{
+    transition: all 0.3s ease-in-out;
+}
+
+.numimpar:hover
+{
+    color: red;
+}
+
+.brand-logo
+{
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.brand-logo:hover
+{
+    transform: scale(1.2);
+    margin-left: 25px;
+}
+

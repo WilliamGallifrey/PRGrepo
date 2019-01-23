@@ -28,7 +28,7 @@
     echo"<h2>Ey, soy el resultado del refuerzo 1</h2>";
 echo'<ul>';
 for ($i=1; $i < 40 ; $i+=2) { 
-    echo"<li class='numimpar'>".$i."</li>";
+    echo"<li class='numimpar'><span id='numspan'>".$i."</span></li>";
 }
 echo'</ul>';
 
