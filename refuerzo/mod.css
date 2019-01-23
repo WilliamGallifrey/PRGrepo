@@ -16,7 +16,7 @@ nav
     transition: all 0.3s ease-in-out;
 }
 
-.numimpar:hover
+span.numspan:hover
 {
     color: red;
 }
