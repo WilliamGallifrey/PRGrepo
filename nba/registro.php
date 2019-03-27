@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +10,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<nav>
+    <div class="nav-wrapper">
+      <a href="index.php" class="brand-logo">Inicio</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="listadoUsuarios.php">Usuarios</a></li>
+        <li><a href="registro.php">Registro</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<?php
+if(isset($_GET['error']))
+{
+    echo" <h2 style = 'color:red'>$_GET[error]</h2>";
+}
+?>
 
 <form action="listadoUsuarios.php" method="POST">
         <input type="text" placeholder ="Nombre" name="nom" required>
@@ -17,7 +35,7 @@
         <input type="text" placeholder ="Peso" name="pes" required>
         <input type="text" placeholder ="Posición" name="pos" required>
         <input type="text" placeholder ="Nombre equipo" name="neq" required>
-        <input type="submit" value="Insertar usuario">
+        <input class="waves-effect waves-light btn" type="submit" value="Insertar usuario">
 
 
 </form>
