@@ -26,21 +26,22 @@ else
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Usuario</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/nba.css">
 </head>
 <body>
 
-<?php include "assets/navSup.php";?>
+<?php include "assets/navSup.php";
 
 
-  <?php
   
+echo'<article id="content">';
   echo "<h2>$resultado[Nombre]</h2>";
   echo "<h4>Juega en:</h4>";
   echo "<h3>$resultado[Nombre_equipo]</h3>";
-  
+  echo"</article>";
  
   
-  
+  include "assets/footer.html";
   ?>
         
 </body>

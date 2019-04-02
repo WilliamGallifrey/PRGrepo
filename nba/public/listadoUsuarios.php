@@ -1,8 +1,10 @@
 <?php
 
-$conector = new mysqli("localhost","root", "", "nba");
-if ($conector->connect_errno) 
-  echo "Fallo al conectar a MySQL: " . $conector->connect_errno;
+require "../src/Jugador.php";
+
+$jugador = new Jugador();
+
+$conector = $jugador->bdconn();
 
     $resArr = $conector->query("SELECT Nombre_equipo FROM jugadores");
     $equipos = array();
@@ -33,12 +35,10 @@ if(isset($_POST['nom']))
             header("Location: registro.php?error=$error");
         }
 
-        $conector->query("INSERT INTO jugadores (Nombre,Procedencia,Altura,Peso,Posicion,Nombre_equipo) VALUES ('$nom','$pro','$alt','$pes','$pos','$neq')");
-
-
+        $jugador->insertar($nom,$pro,$alt,$pes,$pos,$neq);
     }  
 
-  $resBD = $conector->query("SELECT * FROM jugadores");
+  $resBD = $jugador->listado();
 ?>
 
 <!DOCTYPE html>
@@ -50,11 +50,13 @@ if(isset($_POST['nom']))
     <title>Equipo Basket</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/nba.css">
+
 </head>
 <body>
 
 <?php include "assets/navSup.php";?>
-
+<article id="content">
 <table>
 <th><td>Nombre</td><td>Procedencia</td><td>Altura</td><td>Peso</td><td>Posición</td><td>Nombre Equipo</td></th>
 
@@ -75,8 +77,8 @@ while($result = mysqli_fetch_assoc($resBD))
 }
 ?>
 
-
+<article>
 </table>
-    
+    <?php include "assets/footer.html"; ?>
 </body>
 </html>

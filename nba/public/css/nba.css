@@ -33,3 +33,27 @@ li a:hover {
 .formLabel{
   width: 200px;
 }
+
+footer
+{
+  background-color: #ee6e73;
+    height: 100px;
+    width: 100%;
+    color: white;
+    
+}
+
+nav
+{
+  position: fixed;
+  top: 0;
+}
+
+form
+{
+  margin: 10%;
+}
+
+#content {
+  margin-top: 5%;
+}
