@@ -1,0 +1,22 @@
+
+form
+{
+    margin: 10% 30%;
+    border: 3px solid grey;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+h3
+{
+    top:7%;
+    left:30%;
+    position: absolute;
+}
+
+.warning
+{
+    color: red;
+    font-weight: bold;
+    font-size: 1.8em;
+}
